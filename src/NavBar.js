@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from 'react-router-dom'
 
 function NavBar() {
+    let homeButton = useRef()
+    let projectsButton = useRef()
+    let resumeButton = useRef()
+    let contactButton = useRef()
+    let buttonRefs = [homeButton, projectsButton, resumeButton, contactButton]
+    const highlightButton = (e) => {
+        let normalButtonTextColor = 'rgb(23, 102, 102)'
+        buttonRefs.forEach(buttonRef => {
+            buttonRef.current.style.color = normalButtonTextColor
+        })
+        if (e.target.querySelector('span')) {
+            e.target.querySelector('span').style.color = 'white'
+        } else {
+            e.target.style.color = 'white'
+        }   
+    }
     return (
+
         <div id="navBar">
             <Link to='/'>
-                <button>Home</button>
+                <button onClick={highlightButton}><span style={{color: 'white'}} ref={homeButton}>Home</span></button>
             </Link>
             <Link to='/projects'>
-                <button>Projects</button>
+                <button onClick={highlightButton}><span ref={projectsButton}>Projects</span></button>
             </Link>
             <Link to='/resume'>
-                <button>Resume</button>
+                <button onClick={highlightButton}><span ref={resumeButton}>Resume</span></button>
             </Link>
             <Link to='/contact'>
-                <button>Contact</button>
+                <button onClick={highlightButton}><span ref={contactButton}>Contact</span></button>
             </Link>
         </div>
     );
