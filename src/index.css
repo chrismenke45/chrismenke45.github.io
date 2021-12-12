@@ -17,7 +17,8 @@ code {
   --navBarBackground: rgb(2, 2, 2);
 }
 html {
-  background-image: url('https://wallpapercave.com/dwp1x/2wuJNqK.jpg');
+  /*background-image: url('https://wallpapercave.com/dwp1x/2wuJNqK.jpg');*/
+  background-image: url('https://images.creativemarket.com/0.1.0/ps/9283063/3690/1214/m1/fpnw/wm1/tskwxrwkfmqvqgto5ev8zo5hhdtpkc2z9tpyuudl5dml7qhilamgnnomjpsi1vzc-.jpg?1603657664&s=a473ede2eca93431ef45717b5d38bb3e');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 
@@ -49,9 +50,20 @@ html {
 }
 #home {
   margin: 60px;
+  max-width: 500px;
+  margin: auto;
 }
 #home p {
-  text-indent: 15px;
+  text-indent: 18px;
+}
+#home h1 {
+  text-align: center;
+}
+#photo {
+  height: 400px;
+  margin: auto;
+  border-radius: 50%;
+  display: block;
 }
 .individualProject {
   margin: 20px 40px;
@@ -70,7 +82,12 @@ html {
   color: white;
   padding: 10px;
   border-radius: 20px;
+  transition: .2s;
 }
+.site:hover {
+  transform: scale(1.1);
+}
+
 .code {
   background-color: rgb(37, 37, 37);
   color: rgb(0, 114, 28);
@@ -78,6 +95,10 @@ html {
   cursor: pointer;
   padding: 10px;
   border-radius: 20px;
+  transition: .2s;
+}
+.code:hover {
+  transform: scale(1.1);
 }
 #resume {
   width: 600px;
