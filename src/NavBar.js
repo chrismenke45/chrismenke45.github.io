@@ -20,7 +20,7 @@ function NavBar() {
     }
     return (
 
-        <div id="navBar">
+        <nav id="navBar">
             <Link to='/'>
                 <button onClick={highlightButton}><span style={{color: 'white'}} ref={homeButton}>Home</span></button>
             </Link>
@@ -33,7 +33,7 @@ function NavBar() {
             <Link to='/contact'>
                 <button onClick={highlightButton}><span ref={contactButton}>Contact</span></button>
             </Link>
-        </div>
+        </nav>
     );
 }
 

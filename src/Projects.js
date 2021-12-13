@@ -7,11 +7,11 @@ import memory from "./projects/memory";
 function Projects() {
     const projects = [wheresWaldo, shoppingCart, memory]
     return (
-        <div id="projects">
+        <main id="projects">
             {projects.map(project => {
                 return <IndividualProject project={project} />
             })}
-        </div>
+        </main>
     );
 }
 
