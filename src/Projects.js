@@ -3,9 +3,10 @@ import IndividualProject from "./IndividualProject";
 import wheresWaldo from "./projects/wheresWaldo";
 import shoppingCart from "./projects/shoppingCart";
 import memory from "./projects/memory";
+import pikPak from "./projects/pikPak";
 
 function Projects() {
-    const projects = [wheresWaldo, shoppingCart, memory]
+    const projects = [pikPak, wheresWaldo, shoppingCart, memory]
     return (
         <main id="projects">
             {projects.map(project => {

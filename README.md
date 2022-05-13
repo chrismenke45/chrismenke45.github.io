@@ -1,1 +1,1 @@
-This is my portfolio website.  It is a react app woth react router.
+This is my portfolio website.  It is a react app with react router.
