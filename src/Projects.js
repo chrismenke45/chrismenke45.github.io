@@ -10,6 +10,9 @@ function Projects() {
     const projects = [twitterClone, pikPak, wheresWaldo, shoppingCart]
     return (
         <main id="projects">
+            <div className="projectsTitleContainer">
+                <h2 className="projectsTitle">My Projects:</h2>
+            </div>
             {projects.map(project => {
                 return <IndividualProject project={project} />
             })}
