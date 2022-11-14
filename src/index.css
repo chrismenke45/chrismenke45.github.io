@@ -82,11 +82,15 @@ html {
 }
 #projects {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .projectsTitleContainer {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 30px 0 0 0;
 }
 .projectsTitle {
@@ -96,10 +100,10 @@ html {
 }
 .individualProject {
   margin: 0 40px 0 40px;
-  /*border-top: white 1px solid;*/
   border-bottom: white 1px solid;
   padding: 20px;
   text-align: justify;
+  max-width: 800px;
 
 }
 .projectName {
@@ -174,7 +178,4 @@ html {
   .linkBtn {
     padding: 1px;
   }
-  /*.individualProject {
-    margin: 20px 10px;
-  }*/
 }
