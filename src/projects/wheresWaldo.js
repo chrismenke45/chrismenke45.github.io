@@ -4,6 +4,6 @@ const wheresWaldo = {
     experience: 'This app was one of my first with a backend.  It allowed me to learn how to interact with a backend without worrying about making the backend functional.  It also provided me with the experience of learning to use "<map>" and "<area>" tags to set clickable areas in an image.',
     siteUrl: "https://whereswaldo-8f997.web.app",
     githubUrl: "https://github.com/chrismenke45/wheresWaldo",
-
+    id: 5,
 }
 export default wheresWaldo

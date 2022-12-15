@@ -4,6 +4,7 @@ const chess = {
     experience: 'This project gave me an opportunity to practice my Object Oriented Programming skills by making classes and modules to support each distinct piece without rewriting any code. I also got to write algorithms to detect if there was a check or checkmate on the board.',
     siteUrl: "https://replit.com/@chrismenke45/Chess?v=1",
     githubUrl: "https://github.com/chrismenke45/chess",
+    id: 2,
 
 }
 export default chess

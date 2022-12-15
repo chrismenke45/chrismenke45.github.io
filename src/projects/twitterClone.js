@@ -5,6 +5,7 @@ const twitterClone = {
     siteUrl: "https://chrismenke45.github.io/twitter-client",
     pingUrl: "https://twitter-api-9m7g.onrender.com",
     githubUrl: "https://github.com/chrismenke45/twitter-client",
+    id: 1,
 
 }
 export default twitterClone

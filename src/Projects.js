@@ -16,7 +16,7 @@ function Projects() {
                 <h2 className="projectsTitle">My Projects:</h2>
             </div>
             {projects.map(project => {
-                return <IndividualProject project={project} />
+                return <IndividualProject key={project.id} project={project} />
             })}
         </main>
     );

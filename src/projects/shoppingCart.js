@@ -4,6 +4,7 @@ const shoppingCart = {
     experience: 'This app helped me practice writing reusable code with react. It utilizes the same react template for every item on the site.',
     siteUrl: "https://chrismenke45.github.io/shopping-cart/",
     githubUrl: "https://github.com/chrismenke45/shopping-cart",
+    id: 4,
 
 }
 export default shoppingCart
