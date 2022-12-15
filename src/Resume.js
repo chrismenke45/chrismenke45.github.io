@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import React from "react";
 
 function Resume() {
