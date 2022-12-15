@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function IndividualProject(props) {
     const { project } = props
+
+
+    useEffect(() => {
+        if (project.pingUrl) {
+            let apiUrl = project.pingUrl
+            const options = {
+                method: 'GET',
+            };
+            return fetch(apiUrl, options)
+                .then((response) => {
+                    console.log(`${project.name} pinged`);
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                })
+        }
+    })
     return (
         <div className="individualProject">
             <h3 className="projectName">{project.name}</h3>
