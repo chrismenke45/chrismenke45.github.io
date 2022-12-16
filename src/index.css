@@ -106,6 +106,21 @@ html {
   max-width: 800px;
 
 }
+.fadeIn {
+  opacity: 1;
+  animation: fadeIn 4s linear;
+}
+.hiddenForFadeIn {
+  opacity: 0;
+}
+@keyframes fadeIn {
+  0%, 15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .projectName {
   text-align: center;
 }
