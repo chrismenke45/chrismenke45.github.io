@@ -12,7 +12,7 @@ function IndividualProject(props) {
   
       const scrollFadeIn = () => {
         const topPosition = fadeInRef.current.getBoundingClientRect().top
-          const scrollPosition = window.scrollY + window.innerHeight * 1.4
+          const scrollPosition = window.scrollY + window.innerHeight * 1.3
           if (topPosition < scrollPosition) {
             console.log(topPosition, scrollPosition, window.scrollY + window.innerHeight)
             fadeInRef.current.classList.add("fadeIn")

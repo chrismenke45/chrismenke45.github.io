@@ -9,13 +9,13 @@ import snake from "./projects/snake";
 //import pikPak from "./projects/pikPak";
 
 function Projects() {
-    const projects = [twitterClone, chess, snake]
+    const projects = [twitterClone, snake, chess]
     return (
         <main id="projects">
             <div className="projectsTitleContainer">
                 <h2 className="projectsTitle">My Projects:</h2>
             </div>
-            {projects.map(project => {
+            {projects.map((project, i) => {
                 return <IndividualProject key={project.id} project={project} />
             })}
         </main>
