@@ -185,6 +185,18 @@ html {
   color: white;
   font-size: 40px;
 }
+img.project {
+  max-width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  border: 1px rgb(170, 255, 177) solid;
+}
+img.mobileProject {
+  display: none;
+}
+
 
 @media (max-width:641px) {
   body {
@@ -193,4 +205,11 @@ html {
   .linkBtn {
     padding: 1px;
   }
+  img.mobileProject {
+    display: block;
+  }
+  img.desktopProject {
+    display: none;
+  }
+
 }

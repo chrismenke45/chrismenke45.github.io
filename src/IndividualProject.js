@@ -40,6 +40,8 @@ function IndividualProject(props) {
         <div ref={fadeInRef} className="hiddenForFadeIn individualProject">
             <h3 className="projectName">{project.name}</h3>
             <p>{project.description}</p>
+            {project.desktopPhoto && <img className="desktopProject project" src={project.desktopPhoto} alt={`${project.name} on desktop`}></img>}
+            {project.mobilePhoto && <img className="mobileProject project" src={project.mobilePhoto} alt={`${project.name} on mobile`}></img>}
             <details>
                 <summary>What I learned:</summary>
                 {project.experience}</details>
