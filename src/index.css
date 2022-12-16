@@ -112,6 +112,9 @@ html {
   max-width: 800px;
 
 }
+details {
+  margin: 10px 0;
+}
 .fadeIn {
   opacity: 1;
   animation: fadeIn 4s linear;
