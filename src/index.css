@@ -74,6 +74,11 @@ html {
 #home h1 {
   text-align: center;
 }
+#home a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
 #photo {
   max-height: 400px;
   max-width: 90%;
