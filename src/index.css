@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&family=VT323&display=swap');
+:root {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  --grey-color: rgb(115, 115, 115);
+  color: var(--grey-color);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 
@@ -18,66 +24,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-:root {
-  --navBarBackground: rgb(2, 2, 2);
-}
 html {
-  /*background-image: url('https://wallpapercave.com/dwp1x/2wuJNqK.jpg');*/
-  /*background-image: rbga(0,0,0,0.7) url('https://www.ukri.org/wp-content/uploads/2022/02/STFC-240222-SpaceGalaxyStars-GettyImages-1035676256.jpg');*/
-  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://www.ukri.org/wp-content/uploads/2022/02/STFC-240222-SpaceGalaxyStars-GettyImages-1035676256.jpg'); */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 
-    top 0px left 0px,
-    top 0px right 0px,
-    bottom 0px right 0px,
-    bottom 0px left 0px;
-  background-attachment: fixed; */
-  background: rgb(115, 115, 115);
-}
-#navBar {
-  /*background-color: var(--navBarBackground);*/
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  
-
-}
-#navBar button {
-  border: none;
-  padding: 10px 20px;
-  /*background-color: var(--navBarBackground);*/
-  background: none;
-  cursor: pointer;
-  transition: .2s;
-  flex-shrink: 1;
-}
-#navBar button:hover {
-  transform: scale(1.2);
-}
-#navBar button span {
-  color: rgb(23, 102, 102);
-  font-weight: 900;
-  font-size: 20px;
+  background: linear-gradient(70deg, rgb(129, 0, 194), rgb(216, 2, 130));
 }
 #home {
-  margin: 60px;
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 75px 0;
+  /* background: linear-gradient(0deg, blue, green 40%, red); */
 }
-#home p {
-  text-indent: 18px;
+#home * {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
 }
 #home h1 {
   text-align: center;
+  
+  font-size: 4rem;
+  font-weight: 400;
 }
-#home a {
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
+.underLineStyle {
+  height: 2px;
+  border-radius: 1px;
+  width: 130px;
+  max-width: 100%;
+  background: linear-gradient(90deg, rgb(216, 2, 130), rgb(129, 0, 194), rgb(0, 10, 194), rgb(0, 219, 219))
 }
 #photo {
   max-height: 400px;
@@ -88,25 +64,21 @@ html {
 }
 #projects {
   text-align: center;
+  margin: 0 30px;
+  width: calc(100% - 60px);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.projectsTitleContainer {
-  width: 100%;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px 0 0 0;
+  background: white;
+  font-size: 2rem;
 }
-.projectsTitle {
-  border-bottom: white 1px solid;
-  max-width: 100%;
-  width: 200px;
+.sectionTitle {
+  font-size: 3rem;
+  margin: 10px 0 5px 0;
 }
 .individualProject {
-  margin: 0 40px 0 40px;
-  border-bottom: white 1px solid;
+  margin: 0 40px;
   padding: 20px;
   text-align: justify;
   max-width: 800px;
@@ -161,24 +133,6 @@ details {
   background-color: rgb(37, 37, 37);
   color: rgb(0, 114, 28);
 }
-#resume {
-  max-width: 100%;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-#resumeDownload {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-#resumeDownload > a {
-  color: white;
-  text-decoration: none;
-}
 #contact {
   display: flex;
   flex-direction: row;
@@ -186,12 +140,12 @@ details {
   align-items: center;
   width: 500px;
   max-width: 80%;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
   padding: 20px;
 }
 .icon {
   text-decoration: none;
-  color: white;
+  color: var(--grey-color);
   font-size: 40px;
 }
 img.project {
@@ -201,6 +155,10 @@ img.project {
   margin: 0 auto;
   display: block;
   border: 1px rgb(170, 255, 177) solid;
+  transition: 0.5s;
+}
+img.project:hover {
+  transform: scale(1.01);
 }
 img.mobileProject {
   display: none;

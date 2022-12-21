@@ -1,4 +1,5 @@
 import React from "react";
+import UnderLineStyle from "./UnderLineStyle"
 import IndividualProject from "./IndividualProject";
 import twitterClone from "./projects/twitterClone";
 //import wheresWaldo from "./projects/wheresWaldo";
@@ -12,9 +13,8 @@ function Projects() {
     const projects = [twitterClone, snake, chess]
     return (
         <main id="projects">
-            <div className="projectsTitleContainer">
-                <h2 className="projectsTitle">My Projects:</h2>
-            </div>
+                <h2 className="sectionTitle">My Projects:</h2>
+                <UnderLineStyle />
             {projects.map((project, i) => {
                 return <IndividualProject key={project.id} project={project} />
             })}
