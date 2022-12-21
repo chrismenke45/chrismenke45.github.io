@@ -39,7 +39,7 @@ function IndividualProject(props) {
     // })
     return (
         <section ref={fadeInRef} className="hiddenForFadeIn individualProject">
-            <div>
+            <div className="projectText">
                 <h3 className="projectName">{project.name}</h3>
                 <UnderLineStyle />
                 <p>{project.description}</p>
@@ -54,7 +54,7 @@ function IndividualProject(props) {
             </div>
 
 
-                <a className="code growHover linkBtn" href={project.githubUrl} target="_blank" rel="noreferrer"><code>Checkout the code;</code></a>
+                {/*<a className="code growHover linkBtn" href={project.githubUrl} target="_blank" rel="noreferrer"><code>Checkout the code;</code></a>*/}
         </section>
     );
 }
