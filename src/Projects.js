@@ -12,13 +12,13 @@ import snake from "./projects/snake";
 function Projects() {
     const projects = [twitterClone, snake, chess]
     return (
-        <main id="projects">
+        <section id="projects">
                 <h2 className="sectionTitle">My Projects:</h2>
                 <UnderLineStyle />
             {projects.map((project, i) => {
                 return <IndividualProject key={project.id} project={project} />
             })}
-        </main>
+        </section>
     );
 }
 

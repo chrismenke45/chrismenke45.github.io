@@ -42,6 +42,7 @@ html {
   font-size: 3rem;
   font-weight: 300;
   color: white;
+  text-justify: auto;
 }
 #home h1 {
   text-align: center;
@@ -55,14 +56,8 @@ html {
   max-width: 100%;
   background: linear-gradient(90deg, rgb(216, 2, 130), rgb(129, 0, 194), rgb(0, 10, 194), rgb(0, 219, 219))
 }
-#photo {
-  max-height: 400px;
-  max-width: 90%;
-  margin: auto;
-  border-radius: 50%;
-  display: block;
-}
-#projects {
+
+main {
   text-align: center;
   margin: 0 30px;
   width: calc(100% - 60px);
@@ -73,6 +68,23 @@ html {
   background: white;
   font-size: 2rem;
   border-radius: 5px;
+}
+#projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center;
+  margin: 0 30px;
+  width: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 2rem;
+  border-radius: 5px; */
 }
 .sectionTitle {
   font-size: 3rem;
@@ -184,6 +196,28 @@ img.project:hover {
 img.mobileProject {
   display: none;
 }
+#about {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+@keyframes floatUp {
+  
+}
+#about p {
+  flex: 0 1 550px;
+}
+#about a {
+  text-decoration: none;
+  color: blue;
+}
+#photo {
+  flex: 0 1 400px;
+  max-width: 400px;
+  border-radius: 50%;
+}
 
 @media (max-width:1250px) {
   .individualProject:nth-child(n) {
@@ -203,6 +237,21 @@ img.mobileProject {
   img.project {
     margin: 10px 0;
   }
+  #about {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+  #about p {
+    flex: auto;
+    max-width: 550px;
+    width: 95%;
+  }
+  #photo {
+    flex: auto;
+    max-width: 400px;
+    width: 95%;
+  }
 }
 
 @media (max-width:641px) {
@@ -219,10 +268,13 @@ img.mobileProject {
     display: none;
   }
   .individualProject {
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 0;
   }
-  #projects {
+  .projectText {
+    padding: 0 10px;
+  }
+  main {
     margin: 0 3px;
     width: calc(100% - 6px);
   }

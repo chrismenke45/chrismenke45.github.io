@@ -1,15 +1,18 @@
 import React from "react";
-//import NavBar from "./NavBar";
 import Home from "./Home";
 import Projects from "./Projects";
-//import Resume from "./Resume";
+import About from "./About";
 import Contact from "./Contact";
 
 function App() {
   return (
     <body>
       <Home />
-      <Projects />
+      <main>
+        <About />
+        <Projects />
+      </main>
+
       <Contact />
     </body>
   );
