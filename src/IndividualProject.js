@@ -13,9 +13,7 @@ function IndividualProject(props) {
 
     const scrollFadeIn = () => {
         const topPosition = fadeInRef.current.getBoundingClientRect().top
-        const scrollPosition = window.scrollY + window.innerHeight * 1.3
-        if (topPosition < scrollPosition) {
-            console.log(topPosition, scrollPosition, window.scrollY + window.innerHeight)
+        if (topPosition < window.innerHeight * .95) {
             fadeInRef.current.classList.add("fadeIn")
             fadeInRef.current.classList.remove("hiddenForFadeIn")
         }
@@ -38,7 +36,7 @@ function IndividualProject(props) {
     //     }
     // })
     return (
-        <section ref={fadeInRef} className="hiddenForFadeIn individualProject">
+        <section key={`project${project.id}`} id={`project${project.id}`} ref={fadeInRef} className="hiddenForFadeIn individualProject">
             <div className="projectText">
                 <h3 className="projectName">{project.name}</h3>
                 <UnderLineStyle />
@@ -54,7 +52,7 @@ function IndividualProject(props) {
             </div>
 
 
-                {/*<a className="code growHover linkBtn" href={project.githubUrl} target="_blank" rel="noreferrer"><code>Checkout the code;</code></a>*/}
+            {/*<a className="code growHover linkBtn" href={project.githubUrl} target="_blank" rel="noreferrer"><code>Checkout the code;</code></a>*/}
         </section>
     );
 }
