@@ -185,7 +185,8 @@ img.mobileProject {
 }
 #about p {
   flex: 0 1 550px;
-  text-justify: inter-word;
+  text-align: justify;
+  text-align-last: center;
 }
 #about a {
   text-decoration: none;
