@@ -20,21 +20,21 @@ function IndividualProject(props) {
     }
 
 
-    // useEffect(() => {
-    //     if (project.pingUrl) {
-    //         let apiUrl = project.pingUrl
-    //         const options = {
-    //             method: 'GET',
-    //         };
-    //         return fetch(apiUrl, options)
-    //             .then((response) => {
-    //                 console.log(`${project.name} pinged`);
-    //             })
-    //             .catch(error => {
-    //                 console.error('Error:', error)
-    //             })
-    //     }
-    // })
+    useEffect(() => {
+        if (project.pingUrl) {
+            let apiUrl = project.pingUrl
+            const options = {
+                method: 'GET',
+            };
+            return fetch(apiUrl, options)
+                .then((response) => {
+                    console.log(`${project.name} pinged`);
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                })
+        }
+    })
     return (
         <section key={`project${project.id}`} id={`project${project.id}`} ref={fadeInRef} className="hiddenForFadeIn individualProject">
             <div className="projectText">
@@ -47,8 +47,8 @@ function IndividualProject(props) {
                 </details>
             </div>
             <div>
-                {project.desktopPhoto && <a href={project.siteUrl} target="_blank"><img className="desktopProject project" src={project.desktopPhoto} alt={`${project.name} on desktop`}></img></a>}
-                {project.mobilePhoto && <a href={project.siteUrl} target="_blank"><img className="mobileProject project" src={project.mobilePhoto} alt={`${project.name} on mobile`}></img></a>}
+                {project.desktopPhoto && <a href={project.siteUrl} target="_blank" rel="noreferrer"><img className="desktopProject project" src={project.desktopPhoto} alt={`${project.name} on desktop`}></img></a>}
+                {project.mobilePhoto && <a href={project.siteUrl} target="_blank" rel="noreferrer"><img className="mobileProject project" src={project.mobilePhoto} alt={`${project.name} on mobile`}></img></a>}
             </div>
 
 

@@ -6,7 +6,7 @@ import Contact from "./Contact";
 
 function App() {
   return (
-    <body>
+    <div id="app">
       <Home />
       <main>
         <About />
@@ -14,7 +14,7 @@ function App() {
       </main>
 
       <Contact />
-    </body>
+    </div>
   );
 }
 
