@@ -21,11 +21,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 html {
   background: linear-gradient(70deg, rgb(129, 0, 194), rgb(216, 2, 130));
 }
@@ -169,19 +164,6 @@ img.mobileProject {
   padding: 20px 0;
   width: calc(100% - 80px);
   border-bottom: 1px var(--grey-color) solid;
-}
-.floatUp {
-  animation: floatUp var(--onLoadAnimationTime) linear;
-}
-@keyframes floatUp {
-  0% {
-    transform: translate(0, 200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0,0);
-    opacity: 1;
-  }
 }
 #about p {
   flex: 0 1 550px;
