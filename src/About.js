@@ -8,7 +8,7 @@ function About() {
                 I have also started to learn Ruby on Rails and SQL. Please checkout my projects and <a href="Resume.pdf" download={true}>resume</a>.  
                 Reach out to me if you think I’d be the right fit for you!
             </p>
-            <img id='photo' className="fadeIn" src='./IMG_4657.jpg' alt='Me'></img>
+            {/*<img id='photo' class="slowFadeIn" src='./IMG_4657.jpg' alt='Me'></img>*/}
         </section>
     );
 }

@@ -14,7 +14,7 @@ function Projects() {
     return (
         <section id="projects">
                 <h2 className="sectionTitle">My Projects:</h2>
-                <UnderLineStyle />
+                <UnderLineStyle/>
             {projects.map((project, i) => {
                 return <IndividualProject key={project.id} project={project} />
             })}

@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-size: 62.5%;
   --grey-color: rgb(115, 115, 115);
+  --onLoadAnimationTime: 1.6s;
   color: var(--grey-color);
   text-align: justify;
 }
@@ -35,7 +36,6 @@ html {
   justify-content: space-around;
   align-items: center;
   padding: 75px 0;
-  /* background: linear-gradient(0deg, blue, green 40%, red); */
 }
 #home * {
   margin: 0;
@@ -75,16 +75,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-align: center;
-  margin: 0 30px;
-  width: calc(100% - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  font-size: 2rem;
-  border-radius: 5px; */
 }
 .sectionTitle {
   font-size: 3rem;
@@ -119,12 +109,11 @@ details {
 summary {
   cursor: pointer;
 }
-.fadeIn {
-  opacity: 1;
-  animation: fadeIn 4s linear;
-}
 .hiddenForFadeIn {
   opacity: 0;
+}
+.fadeIn {
+  animation: fadeIn var(--onLoadAnimationTime) linear;
 }
 @keyframes fadeIn {
   0%, 15% {
@@ -134,37 +123,13 @@ summary {
     opacity: 1;
   }
 }
+.hiddenForFadeIn {
+  opacity: 0;
+}
 .projectName {
   text-align: center;
 }
-.projectLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 5px 0 0 0;
-}
-.site {
-  background-color: black;
-  color: white;
-}
-.linkBtn {
-  text-decoration: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 20px;
-  text-align: center;
-}
-.growHover {
-  transition: .2s;
-}
-.growHover:hover {
-  transform: scale(1.1);
-}
 
-.code {
-  background-color: rgb(37, 37, 37);
-  color: rgb(0, 114, 28);
-}
 #contact {
   display: flex;
   flex-direction: row;
@@ -202,12 +167,25 @@ img.mobileProject {
   align-items: center;
   justify-content: space-evenly;
   padding: 20px 0;
+  width: calc(100% - 80px);
+  border-bottom: 1px var(--grey-color) solid;
+}
+.floatUp {
+  animation: floatUp var(--onLoadAnimationTime) linear;
 }
 @keyframes floatUp {
-  
+  0% {
+    transform: translate(0, 200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
 }
 #about p {
   flex: 0 1 550px;
+  text-justify: inter-word;
 }
 #about a {
   text-decoration: none;
@@ -277,5 +255,8 @@ img.mobileProject {
   main {
     margin: 0 3px;
     width: calc(100% - 6px);
+  }
+  .floatUp {
+    animation: none;
   }
 }
