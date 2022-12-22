@@ -1,8 +1,9 @@
 import React from "react";
 
-function UnderLineStyle() {
+function UnderLineStyle(props) {
+    const { theClass } = props
     return (
-        <div className="underLineStyle">
+        <div className={theClass ? `${theClass} underLineStyle` : "underLineStyle"}>
         </div>
     );
 }
