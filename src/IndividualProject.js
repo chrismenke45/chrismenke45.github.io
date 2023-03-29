@@ -13,7 +13,7 @@ function IndividualProject(props) {
 
     const scrollFadeIn = () => {
         const topPosition = fadeInRef.current.getBoundingClientRect().top
-        if (topPosition < window.innerHeight * .95) {
+        if (topPosition < window.innerHeight * .775) {
             fadeInRef.current.classList.add("fadeIn")
             fadeInRef.current.classList.remove("hiddenForFadeIn")
         }
