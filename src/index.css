@@ -45,7 +45,7 @@ html {
   font-weight: 600;
   transform-origin: bottom left;
   /* transform: rotate(-15deg); */
-  animation: enterRight .75s linear;
+  animation: enterRight 1.1s linear;
 }
 @keyframes enterRight {
   0% {
@@ -61,7 +61,7 @@ html {
 #home h2 {
   transform-origin: top right;
   /* transform: rotate(-15deg); */
-  animation: enterLeft .75s linear;
+  animation: enterLeft 1.1s linear;
 }
 @keyframes enterLeft {
   0% {
@@ -105,6 +105,7 @@ main {
   font-size: 3rem;
   margin: 10px 0 5px 0;
 }
+
 .individualProject:nth-child(2n) {
   flex-direction: row-reverse;
 }
@@ -119,7 +120,77 @@ main {
   align-items: center;
   justify-content: space-around;
   border-bottom: 1px var(--grey-color) solid;
+  overflow-x: hidden;
 }
+
+
+
+/* @keyframes fadeIn {
+  0%, 15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+.fadeInLeft {
+  animation: fadeInLeft var(--onLoadAnimationTime) linear;
+}
+.fadeInRight {
+  animation: fadeInRight var(--onLoadAnimationTime) linear;
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translate(-800px, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: .2;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translate(800px, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: .2;
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes fadeIn {
+  0%, 15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
 .projectText {
   flex: 0 1 600px;
   display: flex;

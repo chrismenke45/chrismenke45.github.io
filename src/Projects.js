@@ -14,7 +14,7 @@ function Projects() {
                 <h2 className="sectionTitle">My Projects:</h2>
                 <UnderLineStyle/>
             {projects.map((project, i) => {
-                return <IndividualProject key={project.id} project={project} />
+                return <IndividualProject key={project.id} project={project} even={i % 2} />
             })}
         </section>
     );
