@@ -1,16 +1,14 @@
 import React from "react";
 import UnderLineStyle from "./UnderLineStyle"
 import IndividualProject from "./IndividualProject";
+import instaClone from "./projects/instaClone";
 import twitterClone from "./projects/twitterClone";
-//import wheresWaldo from "./projects/wheresWaldo";
-//import shoppingCart from "./projects/shoppingCart";
 import chess from "./projects/chess";
 import snake from "./projects/snake";
-//import memory from "./projects/memory";
-//import pikPak from "./projects/pikPak";
+
 
 function Projects() {
-    const projects = [twitterClone, snake, chess]
+    const projects = [instaClone, twitterClone, snake, chess]
     return (
         <section id="projects">
                 <h2 className="sectionTitle">My Projects:</h2>
