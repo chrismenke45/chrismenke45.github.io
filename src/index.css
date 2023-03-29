@@ -3,7 +3,7 @@
   box-sizing: border-box;
   font-size: 62.5%;
   --grey-color: rgb(115, 115, 115);
-  --onLoadAnimationTime: 1.6s;
+  --onLoadAnimationTime: 1.2s;
   color: var(--grey-color);
   text-align: justify;
 }
@@ -43,6 +43,36 @@ html {
   text-align: center;
   font-size: 4rem;
   font-weight: 600;
+  transform-origin: bottom left;
+  /* transform: rotate(-15deg); */
+  animation: enterRight .75s linear;
+}
+@keyframes enterRight {
+  0% {
+    transform: translate(700px, 0) rotate(0);
+  }
+  50%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  75% {
+    transform: translate(-20px, 0) rotate(-15deg);
+  }
+}
+#home h2 {
+  transform-origin: top right;
+  /* transform: rotate(-15deg); */
+  animation: enterLeft .75s linear;
+}
+@keyframes enterLeft {
+  0% {
+    transform: translate(-700px, 0) rotate(0);
+  }
+  50%, 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  75% {
+    transform: translate(20px, 0) rotate(-15deg);
+  }
 }
 .underLineStyle {
   height: 2px;
