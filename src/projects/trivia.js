@@ -1,7 +1,7 @@
 const trivia = {
     name: "Trivia",
     description: '',
-    experience: '',
+    experience: 'Tailwind CSS',
     siteUrl: "https://chrismenke45.github.io/trivia",
     githubUrl: "https://github.com/chrismenke45/trivia",
     desktopPhoto: "./ProjectPhotos/trivia/desktop.png",
