@@ -128,8 +128,10 @@ main {
   padding: 0 30px;
   text-align: justify;
 }
-details {
-  margin: 10px 0;
+.technologies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 summary {
   cursor: pointer;

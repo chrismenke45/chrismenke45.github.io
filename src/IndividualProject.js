@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import UnderLineStyle from "./UnderLineStyle"
+import TechnologyLogo from "./TechnologyLogo";
 
 function IndividualProject(props) {
     const { project } = props
@@ -20,31 +21,32 @@ function IndividualProject(props) {
     }
 
 
-    useEffect(() => {
-        if (project.pingUrl) {
-            let apiUrl = project.pingUrl
-            const options = {
-                method: 'GET',
-            };
-            return fetch(apiUrl, options)
-                .then((response) => {
-                    console.log(`${project.name} pinged`);
-                })
-                .catch(error => {
-                    console.error('Error:', error)
-                })
-        }
-    })
+    // useEffect(() => {
+    //     if (project.pingUrl) {
+    //         let apiUrl = project.pingUrl
+    //         const options = {
+    //             method: 'GET',
+    //         };
+    //         return fetch(apiUrl, options)
+    //             .then((response) => {
+    //                 console.log(`${project.name} pinged`);
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error:', error)
+    //             })
+    //     }
+    // })
     return (
         <section key={`project${project.id}`} id={`project${project.id}`} ref={fadeInRef} className="hiddenForFadeIn individualProject">
             <div className="projectText">
                 <h3 className="projectName">{project.name}</h3>
                 <UnderLineStyle />
                 <p>{project.description}</p>
-                <details>
-                    <summary>What I learned:</summary>
-                    {project.experience}
-                </details>
+                <div className="technologies">
+                    {project.technologies.map(technology => {
+                        return <TechnologyLogo technology={technology} />
+                    })}
+                </div>
             </div>
             <div>
                 {project.desktopPhoto && <a href={project.siteUrl} target="_blank" rel="noreferrer"><img className="desktopProject project" src={project.desktopPhoto} alt={`${project.name} on desktop`}></img></a>}
