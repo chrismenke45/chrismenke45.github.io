@@ -21,21 +21,22 @@ function IndividualProject(props) {
     }
 
 
-    // useEffect(() => {
-    //     if (project.pingUrl) {
-    //         let apiUrl = project.pingUrl
-    //         const options = {
-    //             method: 'GET',
-    //         };
-    //         return fetch(apiUrl, options)
-    //             .then((response) => {
-    //                 console.log(`${project.name} pinged`);
-    //             })
-    //             .catch(error => {
-    //                 console.error('Error:', error)
-    //             })
-    //     }
-    // })
+    useEffect(() => {
+        if (project.pingUrl) {
+            let apiUrl = project.pingUrl
+            const options = {
+                method: 'GET',
+            };
+            return fetch(apiUrl, options)
+                .then((response) => {
+                    console.log(`${project.name} pinged`);
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                })
+        }
+    })
+    
     return (
         <section key={`project${project.id}`} id={`project${project.id}`} ref={fadeInRef} className="hiddenForFadeIn individualProject">
             <div className="projectText">
