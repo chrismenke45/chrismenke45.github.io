@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  background: linear-gradient(70deg, rgb(129, 0, 194), rgb(216, 2, 130));
+  /* background: linear-gradient(70deg, rgb(129, 0, 194), rgb(216, 2, 130)); */
+  background: linear-gradient(70deg, rgb(0, 45, 194), rgb(9, 153, 232));
 }
 #home {
   width: 100%;
