@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -176,6 +177,14 @@ summary {
   color: var(--grey-color);
   font-size: 40px;
 }
+
+.projectImgWrapperBtn {
+  border: none;
+  background: inherit;
+  height: fit-content;
+  width: fit-content;
+}
+
 img.project {
   max-width: 100%;
   max-height: 600px;
@@ -214,6 +223,60 @@ img.mobileProject {
   flex: 0 1 400px;
   max-width: 400px;
   border-radius: 50%;
+}
+
+.modalBackDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(10, 10, 10, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  max-width: 100%;
+  width: 500px;
+  max-height: 100%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.modalCloseWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalCloseWrapper .modalBtn {
+  height: 4rem;
+  width: 4rem;
+  line-height: 1;
+  border-radius: 2rem;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.modalBtn {
+  padding: 1rem;
+  border-radius: 2rem;
+  background: linear-gradient(70deg, rgb(0, 45, 194), rgb(9, 153, 232));
+  color: white;
+  font-size: 2rem;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.modalContent {
+  padding: 0 2rem .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width:1250px) {
