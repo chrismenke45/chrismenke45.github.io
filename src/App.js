@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useCallback, useState } from "react"
 import Home from "./Home"
 import Projects from "./Projects"
 import About from "./About"
@@ -9,17 +9,15 @@ function App() {
   const [modalMessage, setModalMessage] = useState("")
   const [modalLink, setModalLink] = useState("")
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setModalMessage("")
     setModalLink("")
-  }
+  }, [])
 
-  const setModalInfo = (message, link) => {
+  const setModalInfo = useCallback((message, link) => {
     setModalMessage(message)
-    console.log(message)
     setModalLink(link)
-    console.log(link)
-  }
+  }, [])
 
   return (
     <div id="app">

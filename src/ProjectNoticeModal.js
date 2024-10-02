@@ -13,7 +13,7 @@ function ProjectNoticeModal({ showModal, message, hideModal, link }) {
     return () => {
       document.removeEventListener("keydown", handleEscapeKey)
     }
-  }, [])
+  }, [hideModal])
 
   return (
     <Modal showModal={showModal}>
