@@ -16,7 +16,7 @@ function ProjectNoticeModal({ showModal, message, hideModal, link }) {
   }, [hideModal])
 
   return (
-    <Modal showModal={showModal}>
+    <Modal showModal={showModal} hideModal={hideModal}>
       <div className="modalCloseWrapper">
         <button
           onClick={hideModal}
