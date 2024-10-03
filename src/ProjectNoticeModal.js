@@ -28,7 +28,7 @@ function ProjectNoticeModal({ showModal, message, hideModal, link }) {
       </div>
       <div className="modalContent">
         <p>{message}</p>
-        <a href={link} className="modalBtn">
+        <a href={link} className="modalBtn" target="_blank">
           Go To Site
         </a>
       </div>
